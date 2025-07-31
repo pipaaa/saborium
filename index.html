@@ -1,1 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saborium</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+      overflow: hidden;
+      position: relative;
+      background: #000;
+      color: white;
+    }
+
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.6;
+      animation: float 20s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) scale(0.5); }
+      50% { transform: translateY(50vh) scale(1.2); }
+      100% { transform: translateY(-20vh) scale(0.8); }
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .logo {
+      width: 150px;
+      margin-bottom: 20px;
+    }
+
+    .slogan {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+
+    .message {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background-color: #e60000;
+    }
+  </style>
+</head>
+<body>
+  <div class="background">
+    <!-- Generamos burbujas de color que se mueven constantemente -->
+    <div class="bubble" style="background-color: #ff4d4d; width: 150px; height: 150px; left: 10%; animation-delay: 0s;"></div>
+    <div class="bubble" style="background-color: #4dff4d; width: 100px; height: 100px; left: 30%; animation-delay: 5s;"></div>
+    <div class="bubble" style="background-color: #4d4dff; width: 200px; height: 200px; left: 60%; animation-delay: 3s;"></div>
+    <div class="bubble" style="background-color: #ffff4d; width: 120px; height: 120px; left: 80%; animation-delay: 7s;"></div>
+  </div>
+
+  <div class="container">
+    <img src="saboriumlogotransnegro.png" alt="Saborium Logo" class="logo" />
+    <div class="slogan">El sabor que lo dice todo.</div>
+    <div class="message">El catálogo de productos estará disponible próximamente.</div>
+    <a href="https://forms.gle/tu-enlace-de-formulario" class="button">¿Quieres saber cuándo?</a>
+  </div>
+</body>
+</html>
 
